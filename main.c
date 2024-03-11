@@ -1,31 +1,13 @@
 #include <stdio.h>
 
-#include "util.h"
+int main(void) {
+    int i, j;
+    int *p;  // a pointer to an integer
+    p = &i;
+    *p = 5;
+    j = i;
 
-#define MAX 10
+    printf("%d %d %d\n", i, j, *p);
 
-int a [MAX] ;
-
-int main (void)
-{
-int i, t, x, y;
-
-/*fill array*/
-
-for (i = 0; i < MAX;i ++)
-{
-a[i] = rand ( );
-
-printf ("%d\n" ,a[i]);
-}
-bubble_sort (MAX, a);
-
-/*print sorted array*/
-
-printf("−−−−−−−−−−−−−−−−−−−−\n");
-for (i = 0; i < MAX; i ++)
-{
-printf("%d\n",a[i]);
-}
-return 0;
+    return 0;
 }
